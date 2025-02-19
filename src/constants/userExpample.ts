@@ -5,7 +5,7 @@ export const UserExample: UserInterface = {
   email: "",
   birthDate: new Date(),
   nationality: "",
-  phone: "",
+  phone: "70000008",
   profession: "",
-  salary: 0,
+  salary: 3000,
 };

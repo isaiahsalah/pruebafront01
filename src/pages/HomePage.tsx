@@ -26,9 +26,13 @@ const HomePage = () => {
         setCargando(false)
     }
 
-    const handleClickOpenGit = () => {
+    const handleClickOpenFrontGit = () => {
         // Redirigir a una URL externa y abrirla en una nueva pestaña
-        window.open('https://www.github.com', '_blank');
+        window.open('https://github.com/isaiahsalah/pruebafront01', '_blank');
+    };
+    const handleClickOpenBackGit = () => {
+        // Redirigir a una URL externa y abrirla en una nueva pestaña
+        window.open('https://github.com/isaiahsalah/pruebaback01', '_blank');
     };
 
 
@@ -82,11 +86,31 @@ const HomePage = () => {
                     Prueba Técnica
                 </Typography>
 
-                <Grid2 p={0.5}>
-                    <IconButton aria-label="edit" color="primary" size='small' onClick={handleClickOpenGit}  >
-                        <GitHub />
-                    </IconButton>
+                <Grid2 container p={0.5} spacing={1} justifyContent={'center'}>
+                    <Grid2 container alignItems={'center'}>
+                        <IconButton aria-label="backend" color="primary" size='small' onClick={handleClickOpenBackGit}  >
+                            <GitHub />
+                        </IconButton>
+                        <Typography color='textSecondary' fontSize={{ xs: 12, sm: 13, md: 14 }} >
+                            backend
+                        </Typography>
+                    </Grid2>
+
+
+                    <Grid2>
+                        <Divider orientation='vertical' />
+
+                    </Grid2>
+                    <Grid2 container alignItems={'center'}>
+                        <IconButton aria-label="frontend" color="primary" size='small' onClick={handleClickOpenFrontGit}  >
+                            <GitHub />
+                        </IconButton>
+                        <Typography color='textSecondary' fontSize={{ xs: 12, sm: 13, md: 14 }} >
+                            Frontend
+                        </Typography>
+                    </Grid2>
                 </Grid2>
+
 
             </Grid2>
 

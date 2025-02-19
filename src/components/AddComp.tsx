@@ -150,7 +150,6 @@ const AddComp: React.FC<AddCompProps> = ({ updateList }) => {
                                 fullWidth
                                 label="Telefono"
                                 type="number"
-
                                 value={Number(data.phone)}
                                 onChange={(event) => {
                                     const newData: UserInterface = { ...data, phone: event.target.value };
