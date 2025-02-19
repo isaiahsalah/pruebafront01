@@ -113,17 +113,9 @@ const HomePage = () => {
                         </Typography>
                     </Grid2>
                 </Grid2>
-
-
             </Grid2>
 
-
-
-
             <AddComp updateList={updateList} />
-
-
-
             <Box
                 sx={{
                     width: {
@@ -147,7 +139,7 @@ const HomePage = () => {
                     }}
                     //onRowClick={posteSelect}
                     hideFooter
-                //slotProps={{ toolbar: { showQuickFilter: true } }}
+                    slotProps={{ toolbar: { showQuickFilter: true } }}
 
                 />
             </Box>

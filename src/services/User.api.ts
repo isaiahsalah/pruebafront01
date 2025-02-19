@@ -22,7 +22,7 @@ export const getUsers = async (): Promise<UserInterface[]> => {
     );
     return dataList;
   } catch (error) {
-    console.error("Error fetching users:", error);
+    console.error("Error al recibir los usuarios:", error);
     throw error;
   }
 };
@@ -33,7 +33,7 @@ export const getUser = async (dataId: number): Promise<UserInterface> => {
     const response = await axios.get(`${urlApi}${urlUser}${dataId}`);
     return response.data;
   } catch (error) {
-    console.error(`Error fetching user with ID ${dataId}:`, error);
+    console.error(`Error al buscar un usuario con su ID ${dataId}:`, error);
     throw error;
   }
 };
@@ -54,7 +54,7 @@ export const addUser = async (item: UserInterface): Promise<number> => {
     const response = await axios.post(urlApi + urlUser, newData);
     return response.status;
   } catch (error) {
-    console.error("Error adding user:", error);
+    console.error("Error al añadir un usuario:", error);
     return 400;
   }
 };
@@ -65,7 +65,7 @@ export const editUser = async (data: UserInterface): Promise<number> => {
     const response = await axios.put(`${urlApi}${urlUser}${data.id}`, data);
     return response.status;
   } catch (error) {
-    console.error("Error editing user:", error);
+    console.error("Error al editar el usuario:", error);
     return 400;
   }
 };
@@ -76,7 +76,7 @@ export const deleteUser = async (id: number): Promise<number> => {
     const response = await axios.delete(`${urlApi}${urlUser}${id}`);
     return response.status;
   } catch (error) {
-    console.error("Error deleting user:", error);
+    console.error("Error al eliminar el usuario:", error);
     return 400;
   }
 };
