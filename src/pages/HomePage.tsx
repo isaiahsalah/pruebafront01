@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Divider, Grid2, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, CircularProgress, Divider, Grid2, IconButton, Link, Typography, useTheme } from '@mui/material'
 import { GitHub } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 
@@ -30,10 +30,13 @@ const HomePage = () => {
         // Redirigir a una URL externa y abrirla en una nueva pestaña
         window.open('https://github.com/isaiahsalah/pruebafront01', '_blank');
     };
+
     const handleClickOpenBackGit = () => {
         // Redirigir a una URL externa y abrirla en una nueva pestaña
         window.open('https://github.com/isaiahsalah/pruebaback01', '_blank');
     };
+
+
 
 
     const columns: GridColDef[] = [
@@ -160,9 +163,12 @@ const HomePage = () => {
                 }}
             >
                 <Divider />
-                <Typography fontFamily={"monospace"} color='textSecondary' p={1} fontSize={{ xs: 11, sm: 12, md: 14 }}>
-                    @isaiahsalah
-                </Typography>
+                <Link href={"https://wa.link/r0ihtx"} target="_blank">
+                    <Typography fontFamily={"monospace"} color='textSecondary' p={1} fontSize={{ xs: 11, sm: 12, md: 14 }}>
+                        @isaiahsalah
+                    </Typography>
+                </Link>
+
             </Grid2>
 
             {cargando && (
